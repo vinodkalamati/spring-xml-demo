@@ -8,6 +8,13 @@ public class Movie {
         this.actor = actor;
     }
 
+    public Movie() {
+    }
+
+    public Movie(Actor actor) {
+        this.actor = actor;
+    }
+
     public void getdetails() {
         System.out.println(
                 " actorName= " + actor.getName() +" age= "+actor.getAge()+" gender= "+actor.getGender());
