@@ -17,12 +17,16 @@ public class Main {
 //        movie.getdetails();
 
 //        using ApplicationContext
-        System.out.println("Using ApplicationContext");
+
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie=context.getBean("movie",Movie.class);
+        Movie movie=context.getBean("movie3",Movie.class);
         movie.getdetails();
         Movie movie1=context.getBean("movie1",Movie.class);
         movie1.getdetails();
+
+
+        //        System.out.println(movie1.getBeanName());
+//        System.out.println(movie1.getContext());
 //        Movie movie3=context.getBean("movie3",Movie.class);
 //        movie3.getdetails();
 //        System.out.println(movie1==movie2);

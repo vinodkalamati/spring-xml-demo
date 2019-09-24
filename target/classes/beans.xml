@@ -5,7 +5,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    PropertyBased Injection-->
-    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName"></bean>
+    <bean id="movie3" class="com.stackroute.domain.Movie" autowire="byName"></bean>
 <!--    Throws an expection if more than one bean is found of same type autowire-byType-->
 <!--    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType"></bean>-->
 
