@@ -5,32 +5,33 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    PropertyBased Injection-->
-    <bean id="movie3" class="com.stackroute.domain.Movie" autowire="byName"></bean>
+<!--    <bean id="movie3" class="com.stackroute.domain.Movie" autowire="byName"></bean>-->
 <!--    Throws an expection if more than one bean is found of same type autowire-byType-->
 <!--    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType"></bean>-->
 
 <!--    Using Constructor-arg-->
-    <bean id="movie1" class="com.stackroute.domain.Movie">
-        <constructor-arg ref="actor2"></constructor-arg>
-    </bean>
+    <bean id="lifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
+<!--    <bean id="movie1" class="com.stackroute.domain.Movie">-->
+<!--        <constructor-arg ref="actor2"></constructor-arg>-->
+<!--    </bean>-->
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="Mahesh"></property>
-        <property name="gender" value="male"></property>
-        <property name="age" value="38"></property>
-    </bean>
+<!--    <bean id="actor1" class="com.stackroute.domain.Actor">-->
+<!--        <property name="name" value="Mahesh"></property>-->
+<!--        <property name="gender" value="male"></property>-->
+<!--        <property name="age" value="38"></property>-->
+<!--    </bean>-->
 
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg type="String" value="MaheshBabu"></constructor-arg>
-        <constructor-arg type="String" value="Male"></constructor-arg>
-        <constructor-arg type="int" value="35"></constructor-arg>
-    </bean>
+<!--    <bean id="actor2" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg type="String" value="MaheshBabu"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Male"></constructor-arg>-->
+<!--        <constructor-arg type="int" value="35"></constructor-arg>-->
+<!--    </bean>-->
 
-    <bean id="actor" class="com.stackroute.domain.Actor">
-        <property name="name" value="Maheshkathi"></property>
-        <property name="gender" value="female"></property>
-        <property name="age" value="38"></property>
-    </bean>
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <property name="name" value="Maheshkathi"></property>-->
+<!--        <property name="gender" value="female"></property>-->
+<!--        <property name="age" value="38"></property>-->
+<!--    </bean>-->
 
 
 
