@@ -5,41 +5,33 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    PropertyBased Injection-->
-    <bean id="actor" class="com.stackroute.domain.Actor">
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName"></bean>
+<!--    Throws an expection if more than one bean is found of same type autowire-byType-->
+<!--    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType"></bean>-->
+
+<!--    Using Constructor-arg-->
+    <bean id="movie1" class="com.stackroute.domain.Movie">
+        <constructor-arg ref="actor2"></constructor-arg>
+    </bean>
+
+    <bean id="actor1" class="com.stackroute.domain.Actor">
         <property name="name" value="Mahesh"></property>
         <property name="gender" value="male"></property>
         <property name="age" value="38"></property>
     </bean>
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="Prabhas"></constructor-arg>
-        <constructor-arg name="gender" value="male"></constructor-arg>
-        <constructor-arg name="age" value="45"></constructor-arg>
-    </bean>
 
     <bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="Charan"></constructor-arg>
-        <constructor-arg name="gender" value="male"></constructor-arg>
-        <constructor-arg name="age" value="47"></constructor-arg>
+        <constructor-arg type="String" value="MaheshBabu"></constructor-arg>
+        <constructor-arg type="String" value="Male"></constructor-arg>
+        <constructor-arg type="int" value="35"></constructor-arg>
     </bean>
 
-    <bean id="actor3" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="samantha"></constructor-arg>
-        <constructor-arg name="gender" value="female"></constructor-arg>
-        <constructor-arg name="age" value="27"></constructor-arg>
-    </bean>
-
-    <bean id="movie1" class="com.stackroute.domain.Movie">
-        <constructor-arg ref="actor3"></constructor-arg>
-    </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie">
-        <constructor-arg ref="actor2"></constructor-arg>
-    </bean>
-    <bean id="movie3" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg ref="actor1"></constructor-arg>
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="Maheshkathi"></property>
+        <property name="gender" value="female"></property>
+        <property name="age" value="38"></property>
     </bean>
 
 
-    <bean name="movie4,movie5" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor"></property>
-    </bean>
+
 </beans>
