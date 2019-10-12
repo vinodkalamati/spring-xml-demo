@@ -9,7 +9,7 @@ public class Movie {
         this.actor = actor;
     }
 
-    public void getdetails() {
+    public void getActorDetails() {
         System.out.println(
                 " actorName= " + actor.getName() +" age= "+actor.getAge()+" gender= "+actor.getGender());
     }
