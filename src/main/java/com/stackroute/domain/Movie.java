@@ -1,8 +1,9 @@
 package com.stackroute.domain;
 
+@Component
 public class Movie {
 
-    Actor actor;
+    private Actor actor;
 
     public void setActor(Actor actor) {
         this.actor = actor;
